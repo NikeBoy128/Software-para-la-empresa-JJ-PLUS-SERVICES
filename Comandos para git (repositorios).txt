@@ -1,0 +1,14 @@
+Para clonar un repositorio:
+Se abre "Git CMD" en windows y escribimos
+git clone https://github.com/anders2D/ITP_JSanchez1013_TASK_1.git <---- La url del repositorio que queremos clonar (así clonamos un repositorio remoto a nuestra computadora)
+PD: Tener en cuando donde se creó la carpeta del repositorio desde el cmd
+
+en el repositoria local para subir al remoto se hace:
+click de derecho en la carpeta del reposirotorio "Open Git Bash Here"
+git status (comprueba si hay algun cambio local)
+git add . (para añadir los cambios de manera local)
+git commit -m "Actulizacion" (Se le añade nombre al cambio)
+git push -u origin main (se suben los cambios al repositorio remoto de Github)
+
+Para traer los cambios 
+git pull (para traer los cambios del repositorio remoto al repositorio local "causa conflicto si alguno de estos archivos fue modificado en ambas partes)
