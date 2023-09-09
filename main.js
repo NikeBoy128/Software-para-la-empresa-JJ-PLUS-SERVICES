@@ -23,5 +23,5 @@ window.addEventListener("load", cargarImagen);
 // Obtén el botón por su ID
 const btn = document.getElementById("prueba");
 
-// Agrega un manejador de eventos al botón para cargar una nueva imagen cuando se haga clic
+
 btn.addEventListener("click", cargarImagen);
