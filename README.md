@@ -58,4 +58,4 @@ Desarrollado por [JSanchez1013, ShiroKurorex, NikeBoy128, Sleinad1].
 
 ## Contacto
 
-Si tienes preguntas o problemas, puedes contactarme en [danieale109@gmail.com].
+Si tienes preguntas o problemas, puedes contactarme en [danieale109@gmail.com]..
