@@ -3,7 +3,8 @@ name: Configuración Incorrecta del Proyecto
 about: Informa sobre un error de configuración en el proyecto
 title: "[ERROR] Título del error de configuración aquí"
 labels: bug
-assignees: nombre_del_asignado
+assignees: ''
+
 ---
 
 **Descripción del Error de Configuración:**
@@ -47,4 +48,3 @@ Si has intentado solucionar el error por tu cuenta, describe los pasos que has s
 - Fecha en la que se informó el error de configuración: [Fecha]
 - Usuario que informó el error de configuración: @nombre_del_usuario
 - Fecha de resolución estimada del error de configuración: [Fecha estimada]
-
