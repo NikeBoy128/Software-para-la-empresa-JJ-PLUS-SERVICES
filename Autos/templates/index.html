@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <div class="table-responsive">
+        <table class="table table-primary">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">anio</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for A in autos %}
+                <tr class="">
+                    <td scope="row">{{A.id}}</td>
+                    <td>{{A.Marca}}</td>
+                    <td>{{A.Modelo}}</td>
+                    <td>{{A.anio}}</td>
+                    
+                {% endfor %}
+    
+            </tbody>
+        </table>
+    </div>
+    
+    
+</body>
+</html>
