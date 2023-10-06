@@ -4,4 +4,4 @@ from .models import Autos
 
 def index(request):
     auto=Autos.objects.all()
-    return render(request, 'index.html', {'autos':Autos})
+    return render(request, 'index.html', {'autos':auto})
