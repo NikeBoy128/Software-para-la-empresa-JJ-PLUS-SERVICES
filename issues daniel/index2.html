@@ -120,7 +120,9 @@
             <ul>
                 <li><a href="#" id="english">English</a></li>
                 <li><a href="#" id="japanese">日本語</a></li>
+                
             </ul>
+            <li><button id="back-to-home">VISITA NUESTRA PAGINA DE COMIDA</button></li>
         </nav>
     </header>
 
@@ -141,6 +143,9 @@
             <h2 id="news-title">最新ニュース</h2>
             <!-- ここにアニメに関するニュースを追加できます -->
         </section>
+        
+        <!-- Botón de redirección a index.html -->
+        
     </main>
 
     <footer>
@@ -190,6 +195,12 @@
             document.querySelector("#news-title").textContent = content.newsTitle;
             document.querySelector("#footer-text").textContent = content.footerText;
         }
+
+        // JavaScript para redirigir al usuario a index.html
+        const backButton = document.getElementById("back-to-home");
+        backButton.addEventListener("click", () => {
+            window.location.href = "index.html";
+        });
     </script>
 </body>
 </html>
