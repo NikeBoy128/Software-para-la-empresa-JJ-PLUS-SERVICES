@@ -15,6 +15,10 @@ JJPLUSSERVICES es un proyecto con el proposito de brindar o dotar a una empresa 
 6. [Creditos](#creditos)
 7. [Contacto](#contacto)
 
+![Aquí un diagrama de arquitectura](https://i.ibb.co/VMmLKJP/Captura-de-pantalla-2023-10-07-081956.png)
+
+- La adición de un diagrama de arquitectura ayudará a los colaboradores y usuarios a comprender mejor cómo funciona nuestro sistema y cómo se relacionan sus componentes. Esto promoverá una mejor colaboración y comprensión del proyecto en general. En la imagen se puede apreciar como el usario interacciona con la parte del FRONT (la parte visual) la cual se conecta a la API que está conectada a una base de datos hecha por el Backend.
+
 ## Instalación
 
 Para ejecutar MyBlogApp en tu sistema local, sigue estos pasos:
