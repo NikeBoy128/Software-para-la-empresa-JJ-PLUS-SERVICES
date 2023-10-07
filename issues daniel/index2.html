@@ -20,6 +20,7 @@
             padding: 20px;
             color: #fff;
             text-align: center;
+            position: relative;
         }
 
         header h1 {
@@ -97,43 +98,98 @@
         nav a:hover {
             color: #ff6600;
         }
+
+        ul.language-switcher {
+            position: absolute;
+            top: 0;
+            right: 0;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul.language-switcher li {
+            display: inline;
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>アニメの世界へようこそ</h1>
+        <h1 id="header-title">アニメの世界へようこそ</h1>
         <nav>
             <ul>
-                <li><a href="#">ホーム</a></li>
-                <li><a href="#">アニメシリーズ</a></li>
-                <li><a href="#">マンガ</a></li>
-                <li><a href="#">ニュース</a></li>
-                <li><a href="#">お問い合わせ</a></li>
+                <li><a href="#" id="english">English</a></li>
+                <li><a href="#" id="japanese">日本語</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="featured-anime">
-            <h2>注目のアニメ</h2>
+            <h2 id="featured-title">注目のアニメ</h2>
             <div class="anime-info">
                 <img src="https://es.web.img2.acsta.net/c_310_420/pictures/16/02/03/17/11/571106.jpg" alt="アニメ画像">
                 <div class="anime-details">
-                    <h3>アニメのタイトル</h3>
-                    <p>ジャンル: アクション、冒険、コメディ、ドラマ、ファンタジー、少年、スーパーパワー</p>
-                    <p>説明: ゴムの能力を持つ "Monkey D. Luffy" が、7歳のときに「Akuma no mi」（悪魔の実）を誤って食べ、ゴムの力を手に入れた。一方、「Gol D. Roger」は「海軍」によって処刑される前に、彼の有名なお宝「ワンピース」が「グランライン」に隠されていると話しました。このニュースは、失われたお宝「ワンピース」を探して無数の海賊をこの場所に送り、大きな海賊の時代を引き起こしました。10年後、Luffyは「Gol D. Roger」に触発され、「赤髪のシャンクス」（Shanks el pelirrojo）という名の海賊と一緒に冒険仲間を見つけ、友達と冒険をし、次の「海賊の王」になることを望んで出航しました。</p>
+                    <h3 id="anime-title">アニメのタイトル</h3>
+                    <p id="anime-genres">ジャンル: アクション、冒険、コメディ、ドラマ、ファンタジー、少年、スーパーパワー</p>
+                    <p id="anime-description">説明: ゴムの能力を持つ "Monkey D. Luffy" が、7歳のときに「Akuma no mi」（悪魔の実）を誤って食べ、ゴムの力を手に入れた...</p>
                 </div>
             </div>
         </section>
 
         <section class="latest-news">
-            <h2>最新ニュース</h2>
+            <h2 id="news-title">最新ニュース</h2>
             <!-- ここにアニメに関するニュースを追加できます -->
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 アニメウェブサイト。全著作権所有。</p>
+        <p id="footer-text">&copy; 2023 アニメウェブサイト。全著作権所有。</p>
     </footer>
+
+    <script>
+        // JavaScript para cambiar el idioma
+        const englishContent = {
+            headerTitle: "Welcome to the Anime World",
+            navLinks: ["Ingles", "Japones", "Manga", "News", "Contact"],
+            featuredTitle: "Featured Anime",
+            animeTitle: "Anime Title",
+            animeGenres: "Genres: Action, Adventure, Comedy, Drama, Fantasy, Shounen, Superpowers",
+            animeDescription: "Description: An epic story of pirates, where it tells the story of 'Monkey D. Luffy' who, when he was 7 years old, accidentally ate a 'Akuma no mi' (Devil Fruit) which gave him rubber powers...",
+            newsTitle: "Latest News",
+            footerText: "&copy; 2023 Anime Website. All rights reserved."
+        };
+
+        const japaneseContent = {
+            headerTitle: "アニメの世界へようこそ",
+            navLinks: ["Ingles", "Japones", "マンガ", "ニュース", "お問い合わせ"],
+            featuredTitle: "注目のアニメ",
+            animeTitle: "アニメのタイトル",
+            animeGenres: "ジャンル: アクション、冒険、コメディ、ドラマ、ファンタジー、少年、スーパーパワー",
+            animeDescription: "説明: ゴムの能力を持つ 'Monkey D. Luffy' が、7歳のときに 'Akuma no mi'（悪魔の実）を誤って食べ、ゴムの力を手に入れた...",
+            newsTitle: "最新ニュース",
+            footerText: "&copy; 2023 アニメウェブサイト。全著作権所有。"
+        };
+
+        const englishLink = document.getElementById("english");
+        const japaneseLink = document.getElementById("japanese");
+
+        englishLink.addEventListener("click", () => changeLanguage(englishContent));
+        japaneseLink.addEventListener("click", () => changeLanguage(japaneseContent));
+
+        function changeLanguage(content) {
+            document.querySelector("#header-title").textContent = content.headerTitle;
+            const navLinks = document.querySelectorAll("nav ul li a");
+            navLinks.forEach((link, index) => {
+                link.textContent = content.navLinks[index];
+            });
+            document.querySelector("#featured-title").textContent = content.featuredTitle;
+            document.querySelector("#anime-title").textContent = content.animeTitle;
+            document.querySelector("#anime-genres").textContent = content.animeGenres;
+            document.querySelector("#anime-description").textContent = content.animeDescription;
+            document.querySelector("#news-title").textContent = content.newsTitle;
+            document.querySelector("#footer-text").textContent = content.footerText;
+        }
+    </script>
 </body>
 </html>
